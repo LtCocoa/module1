@@ -1,0 +1,24 @@
+.slider {
+    list-style-type: none;
+}
+
+.slider > li {
+    display: none;
+}
+
+.slider > li.active_slide {
+    display: block;
+}
+
+.active_slide {
+    position: relative;
+}
+
+.active_slide > img {
+    width: 400px;
+}
+
+.border {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
