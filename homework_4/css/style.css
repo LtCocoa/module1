@@ -15,10 +15,19 @@
 }
 
 .active_slide > img {
-    width: 400px;
+    position: absolute;
+    width: 300px;
+    z-index: 1;
 }
 
 .border {
     border: 1px solid black;
     box-sizing: border-box;
+}
+
+p {
+    position: absolute;
+    font-size: 70px;
+    color: red;
+    z-index: 2;
 }
