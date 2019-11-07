@@ -63,6 +63,7 @@ header {
     color: white;
     grid-template-columns: 1fr 7fr 1fr;
     position: fixed;
+    padding-right: 10px;
     height: 60px;
 }
 
@@ -86,6 +87,8 @@ header li:hover {
 }
 
 header a {
+    display: inline-block;
+    padding: 15px;
     color: whitesmoke;
     text-transform: uppercase;
     text-decoration: none;

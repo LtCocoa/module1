@@ -1,0 +1,110 @@
+/*
+.message {
+    padding: 12px;
+    border-radius: 3px;
+    border: 1px solid black;
+    color: black;
+    background-color: grey;
+}
+
+.message_success {
+    color: #2f5926;
+    border-color: #2f5926;
+    background-color: #11dd11;
+}
+
+.message_warning {
+    color: #2f5926;
+    border-color: #2f5926;
+    background-color: #dfc744;
+}
+
+.message_error {
+    
+}
+
+.message_small {
+    font-size: 0.7em;
+}
+*/
+
+.dropdown-menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+.dropdown-menu__item {
+    flex: 0 0 10em;
+    margin: 0 0.2em;
+    padding: 0.5em 1em;
+    color: rgb(102, 81, 112);
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+    box-sizing: border-box;
+    transition: background-color 0.2s linear;
+}
+
+.dropdown-menu__item:hover {
+    background-color: rgb(243, 240, 244);
+}
+
+.dropdown-menu__item:hover > .dropdown-menu__submenu_area {
+    transition: opacity 0.5s linear, 
+        visibility 0s linear;
+    opacity: 1;
+    visibility: visible;    
+}
+
+.dropdown-menu__submenu_area {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: white;
+    width: calc(10em - 2px);
+    visibility: hidden;
+    opacity: 0;
+    left: 0;
+    top: calc(1em + 1em * 1.5 + 1px);
+    z-index: 1;
+}
+
+.submenu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.submenu__link {
+    display: block;
+    padding: 0.5em;
+    color: rgb(167, 112, 194);
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid rgb(206, 199, 209);
+    transition: background-color, color 0.2s linear;
+}
+
+.submenu__item + .submenu__item > .submenu__link {
+    border-top: 0;
+}
+
+.submenu__link:hover {
+    background-color: rgb(243, 240, 244);
+    color: rgb(28, 19, 32);
+}
+
+.dropdown-menu__item:hover > .dropdown-menu__submenu_area.dropdown-menu__submenu_area_transition_scaleY {
+    transition: transform 0.2s linear;
+    transform: scaleY(1);
+}
+
+.dropdown-menu__submenu_area.dropdown-menu__submenu_area_transition_scaleY {
+    transform: scaleY(0);
+    transform-origin: top;
+}

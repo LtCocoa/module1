@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+}
+
+button {
+    background-color: rgb(64, 191, 191);
+    border: 0;
+    color: white;
+    font-size: 20px;
+    padding: 5px 16px;
+}
+
+button:hover {
+    background-color: rgb(191, 64, 191);
+    border-radius: 16px;
+
+    transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.rotate {
+    height: 200px;
+    width: 200px;
+    background-color: gray;
+    margin: 50px;
+    transform: rotate(30deg);
+    transform-origin: top left;
+}
+
+.translate {
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.translate:hover {
+    transform: translate(40px, -20px) rotateX(45deg) rotateY(30deg) perspective(500px);
+}
+
+.scale {
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    transform-origin: left;
+    transform: scale(0.3);
+    margin-left: 10px;
+}
+
+.skew {
+    height: 200px;
+    width: 200px;
+    background-color: blue;
+    transform: skew(100deg);
+}
+
+.transform-3d {
+    height: 200px;
+    width: 200px;
+    background-color: purple;
+    transform: perspective(400px) rotateY(30deg) rotateX(15deg);
+}
+
+.cont {
+    perspective: 100px;
+    perspective-origin: 50% 50%;
+}
+
+.cont > div {
+    width: 200px;
+    height: 200px;
+    background-color: purple;
+    display: inline-block;
+    transform: rotateX(15deg);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: greenyellow;
+    animation: over-and-back 1.5s linear infinite;
+}
+
+@keyframes over-and-back {
+    0% {
+        background-color: lightgreen;
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(50px, 0);
+    }
+
+    100% {
+        background-color: lightskyblue;
+        transform: translate(0, 0);
+    }
+}
